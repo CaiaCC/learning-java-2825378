@@ -9,7 +9,6 @@ public class Main {
 
         int correctAnswer = 2;
 
-        Scanner input = new Scanner(System.in);
 
         System.out.println(q);
         System.out.println("1) " + choiceOne);
@@ -17,6 +16,8 @@ public class Main {
         System.out.println("3) " + choiceThree);
         System.out.println("What is your answer?");
 
+        Scanner input = new Scanner(System.in);
+        
         int userInput = input.nextInt();
 
         if (userInput == correctAnswer) {
