@@ -2,19 +2,28 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        String q = "3 + 1 * 2 = ?";
+        String choiceOne = "The answer is 8";
+        String choiceTwo = "The answer is 5";
+        String choiceThree = "I don't know";
+
+        int correctAnswer = 2;
+
         Scanner input = new Scanner(System.in);
-        boolean isOnRepeat = true;
 
-        while (isOnRepeat) {
-            System.out.println("Playing current song");
-            System.out.println("Would you like to take this song off of repeat? If so, answer yes");
-            String userInput = input.next();
+        System.out.println(q);
+        System.out.println("1) " + choiceOne);
+        System.out.println("2) " + choiceTwo);
+        System.out.println("3) " + choiceThree);
+        System.out.println("What is your answer?");
 
-            if (userInput.equals("yes")) {
-                isOnRepeat = false;
-            }
+        int userInput = input.nextInt();
+
+        if (userInput == correctAnswer) {
+            System.out.println("You are right!");
+        } else {
+            System.out.println("You are wrong! The correct answer is 2!");
         }
 
-        System.out.println("Playing next song");
     }
 }
