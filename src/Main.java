@@ -2,14 +2,17 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void calculateTotalMealPrice(double listedMealPrice, double tipRate, double taxRate) {
+    public static double calculateTotalMealPrice(double listedMealPrice, double tipRate, double taxRate) {
         double tip = tipRate * listedMealPrice;
         double tax = taxRate * listedMealPrice;
         double result = listedMealPrice + tip + tax;
-        System.out.println("Your total meal price is " + result);
+        return result;
     }
 
     public static void main(String[] args) {
-        calculateTotalMealPrice(45, .15, .12);
+        double groupTotalMealPrice = calculateTotalMealPrice(100, .20, .08);
+
+        double individualMealPrice = groupTotalMealPrice / 5;
+        
     }
 }
